@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ブックマーク共有システム</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>ブックマーク共有システム</h1>
+        <form name="userInputForm" id="userInputForm" action="#" method="get">
+            サイト名: <input name="sitename" id="sitename" type="text" size="40" required><br>
+            URL: <input name="url" id="url" type="text" size="40" required><br>
+            ジャンル名: <select name="genre" id="genre">
+                <option value="">* 選択してください *</option>
+                <option value="news">ニュース</option>
+                <option value="music">音楽</option>
+                <option value="book">本</option>
+                <option value="travel">旅行</option>
+                <option value="programming">プログラミング</option>
+                <option value="shopping">買い物</option>
+                <option value="other">そのほか</option>
+            </select><br><br>
+
+            <div id="userInputFormButtons">
+                <input type="button" name="register" id="register" value="登録" onclick="registerBookmark()">
+                <input type="button" name="view" id="id" value="表示">
+            </div>
+        </form>
+    </body>
+</html>

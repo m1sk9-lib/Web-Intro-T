@@ -1,0 +1,24 @@
+body {
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#userInputForm {
+    background-color: #B3D8FC;
+    padding: 25px;
+    margin: 20px;
+}
+
+#userInputFormButtons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#register {
+    background-color: #F4A259;
+
+}

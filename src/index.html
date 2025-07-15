@@ -13,22 +13,22 @@
     <body>
         <h1>ブックマーク共有システム</h1>
         <form name="userInputForm" id="userInputForm" action="#" method="get">
-            サイト名: <input name="sitename" id="sitename" type="text" size="40" required><br>
-            URL: <input name="url" id="url" type="text" size="40" required><br>
-            ジャンル名: <select name="genre" id="genre">
+            サイト名: <input name="inputSitename" id="inputSitename" type="text" size="40" required><br>
+            URL: <input name="inputURL" id="inputURL" type="text" size="40" placeholder="https://example.com" required><br>
+            ジャンル名: <select name="selectGenre" id="selectGenre">
                 <option value="">* 選択してください *</option>
-                <option value="news">ニュース</option>
-                <option value="music">音楽</option>
-                <option value="book">本</option>
-                <option value="travel">旅行</option>
-                <option value="programming">プログラミング</option>
-                <option value="shopping">買い物</option>
-                <option value="other">そのほか</option>
+                <option value="genreNews">ニュース</option>
+                <option value="genreMusic">音楽</option>
+                <option value="genreBook">本</option>
+                <option value="genreTravel">旅行</option>
+                <option value="genreProgramming">プログラミング</option>
+                <option value="genreShopping">買い物</option>
+                <option value="genreOther">そのほか</option>
             </select><br><br>
 
             <div id="userInputFormButtons">
-                <input type="button" name="register" id="register" value="登録" onclick="registerBookmark()">
-                <input type="button" name="view" id="id" value="表示">
+                <input type="button" name="buttonRegister" id="buttonRegister" value="登録" onclick="registerBookmark()">
+                <input type="button" name="buttonViewer" id="buttonViewer" value="表示">
             </div>
         </form>
     </body>

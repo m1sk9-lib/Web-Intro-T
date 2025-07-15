@@ -5,20 +5,27 @@ body {
 }
 
 #userInputForm {
-    background-color: #B3D8FC;
+    background-color: #FFEEDF;
     padding: 25px;
     margin: 20px;
 }
 
 #userInputFormButtons {
     display: flex;
-    gap: 40px;
+    gap: 80px;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
 
-#register {
-    background-color: #F4A259;
+#buttonRegister {
+    background-color: #39C07F;
+    color: white;
+    border: 1px #39C07F solid;
+}
 
+#buttonViewer {
+    background-color: #3748FF   ;
+    color: white;
+    border: 1px #3748FF solid;
 }

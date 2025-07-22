@@ -11,7 +11,32 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
 
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="lib/index.js"></script>
+        <script>
+            /// URL の形式をチェックする正規表現
+            const URL_REGEX = /^(https?:\/\/)?([\w-]+(\.[\w-]+)+)(:\d+)?(\/.*)?$/;
+
+            function hasInputValue() {
+                const sitename = $("#inputSitename").val();
+                const url = $("#inputURL").val();
+                const genre = $("#selectGenre").val();
+
+                if (!sitename || !url) {
+                    alert('全ての項目を入力してください。');
+                    return;
+                }
+
+                if (!URL_REGEX.test(url)) {
+                    alert('URLの形式が正しくありません。');
+                    return;
+                }
+
+                if (!genre || genre === "選択してください") {
+                    alert('ジャンルを選択してください。');
+                }
+
+                $("#userInputForm").submit();
+            }
+        </script>
     </head>
     <body>
         <h1>ブックマーク共有システム</h1>

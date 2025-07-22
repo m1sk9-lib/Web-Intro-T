@@ -17,7 +17,6 @@
         print("ジャンル: " . $genre . "<br>");
     ?>
     <hr />
-    <!-- TODO: 登録処理後に一覧ページに遷移する -->
-    <input type="button" value="登録する" onclick="alert('登録しました'); location.href='index.html'">
+    <input type="button" value="登録する" onclick="alert('登録しました'); location.href='viewer.php'">
     <input type="button" value="修正" onclick="history.back()">
 </body>

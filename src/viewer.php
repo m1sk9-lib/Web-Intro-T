@@ -11,16 +11,21 @@
     <hr />
 
     <?php
-        $db = new PDO("sqlite:bookmark.sqlite");
+        try {
+            $db = new PDO("sqlite:bookmark.sqlite");
 
-        foreach ($db->query("SELECT * FROM bookmarks") as $row) {
-            printf("%s, %s, %s, %s",
-                $row['id'], $row['sitename'],
-                $row['url'], $row['genre']
-            );
-            print("<br>");
+            foreach ($db->query("SELECT * FROM bookmarks") as $row) {
+                printf("%s, %s, %s, %s",
+                    $row['id'], $row['sitename'],
+                    $row['url'], $row['genre']
+                );
+                print("<br>");
+            }
+
+            $db = null;
+        } catch (PDOException $e) {
+            echo "データベースエラー: " . htmlspecialchars($e->getMessage());
+            exit;
         }
-
-        $db = null;
     ?>
 </body>

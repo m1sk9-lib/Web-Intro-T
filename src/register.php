@@ -12,11 +12,16 @@
         $url = $_GET["inputURL"];
         $genre = $_GET["selectGenre"];
 
-        print("サイト名: " . $sitename . "<br>");
-        print("URL: " . $url . "<br>");
-        print("ジャンル: " . $genre . "<br>");
+        print("サイト名: " . htmlspecialchars($sitename) . "<br>");
+        print("URL: " . htmlspecialchars($url) . "<br>");
+        print("ジャンル: " . htmlspecialchars($genre) . "<br>");
     ?>
     <hr />
-    <input type="button" value="登録する" onclick="alert('登録しました'); location.href='viewer.php'">
-    <input type="button" value="修正" onclick="history.back()">
+    <form action="register_confirm.php" method="post">
+        <input type="hidden" name="inputSitename" value="<?php echo htmlspecialchars($sitename); ?>">
+        <input type="hidden" name="inputURL" value="<?php echo htmlspecialchars($url); ?>">
+        <input type="hidden" name="selectGenre" value="<?php echo htmlspecialchars($genre); ?>">
+        <input type="submit" value="登録する">
+        <input type="button" value="修正" onclick="history.back()">
+    </form>
 </body>
